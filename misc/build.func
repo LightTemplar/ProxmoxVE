@@ -567,8 +567,8 @@ build_container() {
   fi
 
 
-  TEMP_DIR=$(mktemp -d)
-  pushd $TEMP_DIR >/dev/null
+  # TEMP_DIR=$(mktemp -d)
+  # pushd $TEMP_DIR >/dev/null
   if [ "$var_os" == "alpine" ]; then
     #export FUNCTIONS_FILE_PATH="$(curl -s https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/alpine-install.func)"
     export FUNCTIONS_FILE="alpine-install.func"
