@@ -672,11 +672,13 @@ EOF'
     pct exec "$CTID" -- ash -c "apk add bash >/dev/null"
   fi
   # lxc-attach -n "$CTID" -- bash -c "$(wget -qLO - https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/install/$var_install.sh)" || exit
+  
+  pct push "$CTID" "$PWD/misc/$FUNCTIONS_FILE" "/root/$FUNCTIONS_FILE"
   pct push "$CTID" "$PWD/install/$var_install.sh" "/root/$var_install.sh"
   pct push "$CTID" "$PWD/misc/build.func" "/root/build.func"
-  pct push "$CTID" "$PWD/misc/$FUNCTIONS_FILE" "/root/$FUNCTIONS_FILE"
   # pct push "$CTID" "$PWD/misc/$FUNCTIONS_FILE.sh" /root/$FUNCTIONS_FILE.sh
   
+  msg_ok "Scripts copied into container"
   lxc-attach -n "$CTID" -- bash "/root/$var_install.sh" || exit
 
 }
