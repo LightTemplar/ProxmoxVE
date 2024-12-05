@@ -576,7 +576,7 @@ build_container() {
     #export FUNCTIONS_FILE_PATH="$(curl -s https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/misc/install.func)"
     export FUNCTIONS_FILE="install.func"
   fi
-  export FUNCTIONS_FILE_PATH="$(cat /root/$FUNCTIONS_FILE)"
+  export FUNCTIONS_FILE_PATH="$(cat $PWD/misc/$FUNCTIONS_FILE)"
 
   export CACHER="$APT_CACHER"
   export CACHER_IP="$APT_CACHER_IP"
