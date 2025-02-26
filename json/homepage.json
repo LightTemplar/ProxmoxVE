@@ -2,7 +2,7 @@
     "name": "Homepage",
     "slug": "homepage",
     "categories": [
-        15
+        10
     ],
     "date_created": "2024-05-02",
     "type": "ct",
@@ -33,7 +33,7 @@
     "notes": [
         {
             "text": "Configuration (bookmarks.yaml, services.yaml, widgets.yaml) path: `/opt/homepage/config/`",
-            "type": "warning"
+            "type": "info"
         }
     ]
 }

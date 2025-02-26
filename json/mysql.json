@@ -2,7 +2,7 @@
     "name": "MySQL",
     "slug": "mysql",
     "categories": [
-        5
+        8
     ],
     "date_created": "2024-10-10",
     "type": "ct",
@@ -33,7 +33,7 @@
     "notes": [
         {
             "text": "Database credentials: `cat mysql.creds`",
-            "type": "warning"
+            "type": "info"
         },
         {
             "text": "With an option to install the MySQL 8.4 LTS release instead of MySQL 8.0",
